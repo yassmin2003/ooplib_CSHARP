@@ -1,4 +1,4 @@
-﻿namespace ooptask
+namespace ooptask
 {
 
     class Book
@@ -64,7 +64,7 @@
             for (int i = 0; i < books.Count; i++)
             {
 
-                if (books[i].Title == title && books[i].Author == author && books[i].I_S_B_N == ISBN && books[i].Availability == true)
+                if (books[i].Title.Contains(title) && books[i].Author.Contains(author)  && books[i].I_S_B_N == ISBN && books[i].Availability == true)
                 {
                     Console.WriteLine($"book {books[i].Title} is available u can borrow it");
                     return true;
@@ -78,7 +78,7 @@
         {
             for (int i = 0; i < books.Count; i++)
             {
-                if (books[i].Title == title && books[i].Availability == true)
+                if (books[i].Title.Contains(title) && books[i].Availability == true)
                 {
                     Console.WriteLine($"book {books[i].Title} is available u can borrow it");
                     books[i].Availability = false;
@@ -94,7 +94,7 @@
         {
             for (int i = 0; i < books.Count; i++)
             {
-                if (books[i].Title == title && books[i].Availability == false)
+                if (books[i].Title.Contains(title) && books[i].Availability == false)
                 {
                     Console.WriteLine($"book {books[i].Title} is returned successfully");
                     books[i].Availability = true;
@@ -117,7 +117,7 @@
             Library library = new Library();
 
             // Adding books to the library
-            library.AddBook(new Book("Gatsby", "F. Scott Fitzgerald", "9780743273565"));
+            library.AddBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565"));
             library.AddBook(new Book("To Kill a Mockingbird", "Harper Lee", "9780061120084"));
             library.AddBook(new Book("1984", "George Orwell", "9780451524935"));
 
