@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ooplib": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
